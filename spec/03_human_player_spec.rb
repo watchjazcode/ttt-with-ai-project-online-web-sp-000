@@ -10,6 +10,7 @@ describe 'Players::Human' do
       human = Players::Human.new("X")
       allow($stdout).to receive(:puts)
 
+
       expect(human).to receive(:gets).and_return("1")
 
       expect(human.move(Board.new)).to eq("1")
